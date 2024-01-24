@@ -29,8 +29,7 @@ function Navbar(props) {
                     hembarger ? <div className="mt-5">
                         <ul>
                             <Link href='/blog' ><li className="mt-2 py-3 px-2 bg-gray-100">Blog</li></Link>
-                            <li className="mt-2 py-3 px-2 bg-gray-100">About me
-                            </li>
+                            <Link href='/contact' ><li className="mt-2 py-3 px-2 bg-gray-100">Contact</li></Link>
                         </ul>
                     </div> : null
                 }
@@ -43,8 +42,7 @@ function Navbar(props) {
                 </div>
                 <div className='flex'>
                 <Link href='/blog' className='mr-12 text-gray-700 font-mediam cursor-pointer' >Blog</Link>
-                    <Link href='/home' className='mr-12 text-gray-700 font-mediam cursor-pointer'>About Me</Link>
-                    <Link href='' className='mr-12 text-gray-700 font-mediam cursor-pointer'>Contact me</Link>
+                    <Link href='/contact' className='mr-12 text-gray-700 font-mediam cursor-pointer'>Contact me</Link>
                     <div className='cursor-pointer text-gray-700'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />

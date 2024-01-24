@@ -1,9 +1,7 @@
-'use client'
-import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import hospital from '../../public/slider_img/hospital1.png';
 import profile_picture from '../../public/slider_img/profile_picture.png';
-
 import blog1 from '../../public/slider_img/blog1.jpg';
 import blog2 from '../../public/slider_img/blog2.jpg';
 import Link from "next/link";
@@ -51,25 +49,7 @@ function Page() {
     keyPoint: ['Noting', 'somthing'],
     des: ['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Aldus PageMaker including versions of Lorem Ipsum']
   },]
-  const aniString = 'WELCOME';
-  const [aniWord, setAniword] = useState('');
-  let i = 0;
-
-  function typingAnimation() {
-    if (i <= aniString.length) {
-      setAniword((prevAniWord) => prevAniWord + aniString.charAt(i));
-      i++;
-    }
-    if (i == aniString.length) {
-      setAniword('W');
-      i = 0;
-    }
-  }
-
-  useEffect(() => {
-    const typingInterval = setInterval(typingAnimation, 500);
-    return () => clearInterval(typingInterval); // Cleanup interval on component unmount
-  }, []);
+  
 
   return (
     <div className="w-full">

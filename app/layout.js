@@ -2,6 +2,7 @@ import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import SocialMedia from './components/SocialMedia'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const poppins = Poppins({
   weight: '400',
@@ -15,16 +16,13 @@ export const metadata = {
 // const [nav, setNev] = useState(true);
 export default function RootLayout({ children }) {
   return (
-    <html className='md:mx-10 lg:mx-[7rem] sm:mx-12 mx-6' lang="en">
+    <html className={poppins.className} >
       <head>
 
       </head>
-      <body className={poppins.className}>
-        <SocialMedia />
-        <Navbar />
-        {children}
+      <body lang="en">
+          {children}
       </body>
-
     </html>
   )
 }
